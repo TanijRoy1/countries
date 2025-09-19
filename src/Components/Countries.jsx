@@ -10,7 +10,8 @@ const Countries = ({countriesPromise}) => {
         // console.log("visited countries from countries", country);
         if (isVisited) {
             setVisitedCountries(prev => 
-                prev.find(c => c.name.common === country.name.common)?prev:[...prev, country]
+                // prev.find(c => c.name.common === country.name.common)?    prev:[...prev, country]
+                [...prev,country]
             )
         } else {
             setVisitedCountries(prev => 
